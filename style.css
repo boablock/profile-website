@@ -1,6 +1,87 @@
 
+/*----Google Fonts----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,100&display=swap');
+
+/*---- Variable Css----*/
+:root{ 
+    --header-height: 3rem; 
+   /*===== Font and  typography =====*/
+    --body-font: 'Poppins', sans-serif;
+     /*.5rem= 8px, 1rem= 16px, 1.5rem= 24px...*/
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+   /*---- Font-weight---*/
+    --font-medium:500;
+    --font-semi-bold:600;
+    /*===== Margin Bottom=====*/
+    /*.25rem = 4px, .5rem = 8px, .75rem= 12px ...*/
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*---- Colors---*/
+    --primary-color: rgba(228, 233, 88, 0.802);  
+    --light-background: rgb(255, 255, 255); 
+    --header-height: 3rem; 
+    --title-color:black; 
+    --text-color: black;
+    /*---- Fonts----*/
+    --font-semi: 600;
+    /*---- Fonts size for large divices----*/
+    @media screen and (min-width: 968px){
+        --big-font-size: 3.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 2rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+}
+     
+}
+
+/*=================BASE=================*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
     height: 1000px;
+    color: var(--text-color);
+}
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 .hr-custom{
@@ -39,7 +120,7 @@ body{
     margin-top: 50px;
 }
  .div1{
-    border: solid red 1px;
+    border: solid var( --primary-color) 1px;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -48,7 +129,7 @@ body{
 }
 
 .section-presentation .div2{
-    border: solid white 1px;
+    border: solid var( --primary-color) 1px;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -91,4 +172,30 @@ body{
 .p-technologies{
     font-weight: lighter;
     color: lightgray;
+}
+
+.grid-prueba-1{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto 200px;
+    gap: .5rem;
+    /* column-gap: 1rem;
+    row-gap: 1rem; */
+    
+}
+
+.divs1-grid{
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+.grid-prueba-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.divs2-grid{
+    background-color: lightcoral;
+    padding: 5px;
 }
